@@ -1,0 +1,19 @@
+Function IsWordPalindrome:
+
+This function takes a single argument, word, which is a string representing the word to be checked.
+It initializes two integer variables, i and j, to track the positions of characters at the beginning and end of the word, respectively.
+Using a while loop, it compares characters from both ends of the word.
+If a mismatch is found (i.e., word[i] <> word[j]), the function returns false immediately, indicating that the word is not a palindrome.
+If no mismatches are found, it continues to compare characters until i is less than j, at which point it returns true, indicating that the word is a palindrome.
+Procedure CheckPalindrome:
+
+This procedure handles the user interaction part of the program.
+It prompts the user to enter a word for palindrome checking.
+It reads the input word from the user.
+It then calls the IsWordPalindrome function to check if the input word is a palindrome.
+Based on the result from the function, it outputs a message indicating whether the word is a palindrome or not.
+Main Program:
+
+The main part of the program simply calls the CheckPalindrome procedure, initiating the process of checking whether a word is a palindrome.
+It serves as the entry point of the program.
+Overall, this program provides a straightforward way to determine if a word is a palindrome, following the concept of comparing characters from both ends of the word and returning the result. It uses functions and procedures to organize the code and separate different aspects of the task.

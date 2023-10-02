@@ -1,0 +1,49 @@
+ALGORITHM algorithm_ Is palindrome. 
+ function RemoveSpacesAndToLower(word: string): string;
+ begin
+  // Remove spaces and convert to lowercase for case-insensitive comparison
+  RemoveSpacesAndToLower := LowerCase(ReplaceStr(word, ' ', ''));
+ end;
+
+ function IsPalindrome(word: string): boolean;
+
+VAR
+i, j: integer;
+    
+BEGIN
+    set_in// Base case: an empty word or a word with a single character is a palindrome
+  if Length(word) <= 1 then
+    IsPalindrome := True
+  else
+  begin
+    i := 1;
+    j := Length(word);
+
+    // Compare characters at the ends of the word
+    while (i < j) and (word[i] = word[j]) do
+    begin
+      Inc(i);
+      Dec(j);
+    end;
+
+    // If the characters are different, it's not a palindrome
+    IsPalindrome := (i >= j);
+  end;
+ end;
+
+ procedure CheckPalindrome(word: string);
+ begin
+  if IsPalindrome(RemoveSpacesAndToLower(word)) then
+    writeln(word, ' est un palindrome.')
+  else
+    writeln(word, ' n\'est pas un palindrome.');
+ end;
+
+ begin
+  // Test cases
+  CheckPalindrome('gag');
+  CheckPalindrome('kayak');
+  CheckPalindrome('php');
+  CheckPalindrome('radar');
+  CheckPalindrome('hello');structions
+END
